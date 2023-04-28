@@ -7,7 +7,7 @@ public class Phone1Main {
 	public static void main(String[] args) {
 		
 		
-		Phone1DTO pho1dto = new Phone1DTO(1, "검정", "아이폰1", "꺼짐");
+		Phone1DTO pho1dto = new Phone1DTO(1, "블랙", "아이폰1", "꺼짐");
 		Phone1DAO pho1dao = new Phone1DAO();
 		Scanner sc =new Scanner (System.in);
 		
