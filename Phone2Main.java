@@ -20,7 +20,7 @@ public class Phone2Main extends Phone1Main {
 		while(true) {
 			
 			
-			pho2dao.currentStatus(pho1dto,pho2dto);//현재상태보여줌
+			pho2dao.currentStatus(pho2dto);//현재상태보여줌
 			
 			System.out.println("0. 전원끄기 / 전원켜기");
 			System.out.println("1.전화하기 / 전화끊기");
@@ -34,15 +34,15 @@ public class Phone2Main extends Phone1Main {
 			
 			if(selectNum==0) {
 				//전원끄기/전원켜기
-				pho1dao.turnOnOff(pho1dto);
+				pho2dao.turnOnOff(pho2dto);
 			}
 			else if (selectNum==1) {
 				//전화하기 / 전화끊기
-				pho2dao.call(pho1dto,pho2dto);
+				pho2dao.call(pho2dto);
 			}
 			else if (selectNum==2) {
 				//음성전송&수신
-				pho1dao.sendVoice(pho1dto);
+				pho1dao.sendVoice(pho2dto);
 			}
 			else if (selectNum==3) {
 				//내 폰 정보 확인
@@ -50,10 +50,10 @@ public class Phone2Main extends Phone1Main {
 			}
 			else if (selectNum==4) {
 				//방송 켜기
-				pho2dao.dmbOn(pho2dto,pho1dto);
+				pho2dao.dmbOn(pho2dto);
 			}
 			else if (selectNum==5) {
-				pho2dao.dmbOff(pho1dto, pho2dto, pho1dao);
+				pho2dao.dmbOff(pho2dto, pho2dao);
 				//방송끄기 / 채널변경
 			}
 

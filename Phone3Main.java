@@ -21,7 +21,7 @@ public class Phone3Main extends Phone2Main{
 		while(true) {
 			
 			
-			pho3dao.currentStatus(pho1dto,pho2dto,pho3dto);//현재상태보여줌
+			pho3dao.currentStatus(pho3dto);//현재상태보여줌
 			
 			System.out.println("0. 전원끄기 / 전원켜기");
 			System.out.println("1.전화하기 / 전화끊기");
@@ -37,15 +37,15 @@ public class Phone3Main extends Phone2Main{
 			
 			if(selectNum==0) {
 				//전원끄기/전원켜기
-				pho1dao.turnOnOff(pho1dto);
+				pho3dao.turnOnOff(pho3dto);
 			}
 			else if (selectNum==1) {
 				//전화하기 / 전화끊기
-				pho2dao.call(pho1dto,pho2dto);
+				pho2dao.call(pho3dto);
 			}
 			else if (selectNum==2) {
 				//음성전송&수신
-				pho1dao.sendVoice(pho1dto);
+				pho1dao.sendVoice(pho3dto);
 			}
 			else if (selectNum==3) {
 				//내 폰 정보 확인
@@ -53,18 +53,18 @@ public class Phone3Main extends Phone2Main{
 			}
 			else if (selectNum==4) {
 				//방송 켜기
-				pho2dao.dmbOn(pho2dto,pho1dto);
+				pho2dao.dmbOn(pho3dto);
 			}
 			else if (selectNum==5) {
-				pho2dao.dmbOff(pho1dto, pho2dto, pho1dao);
+				pho2dao.dmbOff(pho3dto, pho3dao);
 				//방송끄기 / 채널변경
 			}
 			else if (selectNum==6) {
-				pho3dao.wifiConnect(pho3dto,pho1dto);
+				pho3dao.wifiConnect(pho3dto);
 				//인터넷연결 or 끄기
 			}
 			else if (selectNum==7) {
-				pho3dao.readWeptoon(pho1dto, pho3dto);
+				pho3dao.readWeptoon(pho3dto);
 				// 웹툰보기
 			}
 
