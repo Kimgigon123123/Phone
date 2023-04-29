@@ -10,7 +10,7 @@ public class Phone3DAO extends Phone2DAO {
 		System.out.println("현재 통화상태는 ["+pho1dto.getCallMode()+"]입니다");
 		System.out.println("현재 DMB상태는 ["+pho2dto.getDmbMode()+"]입니다");
 		System.out.println("현재 인터넷상태는 ["+pho3dto.getWifi()+"]입니다");
-		System.out.println("현재 웹툰상태는["+pho3dto.getWifi()+"]입니다");
+		System.out.println("현재 웹툰상태는["+pho3dto.getApp()+"]입니다");
 		System.out.println();
 	}
 	//----------------------------//
@@ -63,10 +63,14 @@ public class Phone3DAO extends Phone2DAO {
 		else if(pho3dto.getWifi().equals("ON")&&pho3dto.getApp().equals("OFF")) {
 			System.out.println("웹툰실행");
 			pho3dto.setApp("ON");
+			System.out.println("(아무키나 눌러주세요)");
+			sc.nextLine();
 		}
 		else if(pho3dto.getApp().equals("ON")) {
 			System.out.println("웹툰을 끕니다");
 			pho3dto.setApp("OFF");
+			System.out.println("(아무키나 눌러주세요)");
+			sc.nextLine();
 		}
 	}
 	else if(pho1dto.getState().equals("꺼짐")) {

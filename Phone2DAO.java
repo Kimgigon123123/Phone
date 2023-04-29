@@ -20,7 +20,9 @@ public class Phone2DAO extends Phone1DAO {
 	
 	void call(Phone1DTO pho1dto, Phone2DTO pho2dto) {// 전화모드
 		Scanner sc = new Scanner(System.in);
-
+		
+		
+		
 		if (pho1dto.getState().equals("켜짐")) { 
 			
 			if (pho2dto.getDmbMode().equals("ON")) {  //DMB켜져 있으면 전화불가

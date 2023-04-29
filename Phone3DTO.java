@@ -42,8 +42,6 @@ public class Phone3DTO extends Phone2DTO {
 
 	public Phone3DTO(int generation, String color, String model, String state) {
 		super(generation, color, model, state);
-		this.wifi = wifi;
-		this.app = app;
 	}
 	
 	
